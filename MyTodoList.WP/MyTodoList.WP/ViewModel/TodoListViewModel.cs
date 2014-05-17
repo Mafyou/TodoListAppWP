@@ -5,7 +5,7 @@ using MyTodoList.WP.Model;
 
 namespace MyTodoList.WP.ViewModel
 {
-    public class TodoViewModel : ViewModelBase
+    public class TodoListViewModel : ViewModelBase
     {
         #region Properties
         public List<TodoItem> TodoItems { get; set; }
@@ -28,7 +28,7 @@ namespace MyTodoList.WP.ViewModel
         /// <summary>
         /// Initializes a new instance of the TodoViewModel class.
         /// </summary>
-        public TodoViewModel()
+        public TodoListViewModel()
         {
             TodoItems = new List<TodoItem>();
             if (IsInDesignMode)

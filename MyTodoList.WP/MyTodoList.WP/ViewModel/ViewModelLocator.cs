@@ -12,7 +12,6 @@
   See http://www.galasoft.ch/mvvm
 */
 
-using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;
 
@@ -42,23 +41,23 @@ namespace MyTodoList.WP.ViewModel
             ////    SimpleIoc.Default.Register<IDataService, DataService>();
             ////}
 
-            SimpleIoc.Default.Register<TodoViewModel>();
-            SimpleIoc.Default.Register<TodoDetailViewModel>();
+            SimpleIoc.Default.Register<TodoListViewModel>();
+            SimpleIoc.Default.Register<DetailViewModel>();
         }
 
-        public TodoViewModel TodoVM
+        public TodoListViewModel TodoListVM
         {
             get
             {
-                return ServiceLocator.Current.GetInstance<TodoViewModel>();
+                return ServiceLocator.Current.GetInstance<TodoListViewModel>();
             }
         }
 
-        public TodoDetailViewModel TodoDetailVM
+        public DetailViewModel DetailVM
         {
             get
             {
-                return ServiceLocator.Current.GetInstance<TodoDetailViewModel>();
+                return ServiceLocator.Current.GetInstance<DetailViewModel>();
             }
         }
 

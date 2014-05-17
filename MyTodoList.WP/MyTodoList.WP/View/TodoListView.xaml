@@ -1,5 +1,5 @@
 ﻿<phone:PhoneApplicationPage
-    x:Class="MyTodoList.WP.View.TodoView"
+    x:Class="MyTodoList.WP.View.TodoListView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
@@ -12,7 +12,7 @@
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True"
-    DataContext="{Binding Source={StaticResource Locator}, Path=TodoVM}"
+    DataContext="{Binding Source={StaticResource Locator}, Path=TodoListVM}"
     >
 
     <!--LayoutRoot is the root grid where all page content is placed-->
@@ -42,5 +42,9 @@
             </ListBox>
         </Grid>
     </Grid>
-
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar Mode="Default">
+            <shell:ApplicationBarIconButton IsEnabled="True" Text="Add" IconUri="/Assets/ApplicationIcon.png" Click="OnClick_AddButton"></shell:ApplicationBarIconButton>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
 </phone:PhoneApplicationPage>

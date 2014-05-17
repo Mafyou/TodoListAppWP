@@ -94,6 +94,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Data\BuildDataMoq.cs" />
+    <Compile Include="Helpers\TodoMode.cs" />
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="Model\CoordinateItem.cs" />
     <Compile Include="Model\TodoItem.cs" />
@@ -103,14 +104,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ViewModel\TodoDetailViewModel.cs" />
-    <Compile Include="ViewModel\TodoViewModel.cs" />
+    <Compile Include="ViewModel\DetailViewModel.cs" />
+    <Compile Include="ViewModel\TodoListViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
-    <Compile Include="View\TodoDetailView.xaml.cs">
-      <DependentUpon>TodoDetailView.xaml</DependentUpon>
+    <Compile Include="View\DetailView.xaml.cs">
+      <DependentUpon>DetailView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\TodoView.xaml.cs">
-      <DependentUpon>TodoView.xaml</DependentUpon>
+    <Compile Include="View\TodoListView.xaml.cs">
+      <DependentUpon>TodoListView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -118,11 +119,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
-    <Page Include="View\TodoDetailView.xaml">
+    <Page Include="View\DetailView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\TodoView.xaml">
+    <Page Include="View\TodoListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
